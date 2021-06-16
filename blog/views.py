@@ -38,8 +38,8 @@ class HomeView(View):
 
         # }
         '''
-        featured_obj = Blog.objects.all().filter(status='active', visible=True, featured=True).order_by('catagories','-created_at')[:5]
-        post_obj = Blog.objects.all().filter(status='active', visible=True).order_by('catagories','-created_at')
+        featured_obj = Blog.objects.filter(status='active', visible=True, featured=True).order_by('catagories','-created_at')[:5]
+        post_obj = Blog.objects.filter(status='active', visible=True).order_by('catagories','-created_at')
         # As per Templates Views
         first_post = featured_obj.first()
         s_post = featured_obj[1]

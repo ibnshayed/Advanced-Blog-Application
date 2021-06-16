@@ -10,11 +10,11 @@ class CatAdmin(admin.ModelAdmin):
 
 admin.site.register(Catagory,CatAdmin)
 
-# @admin.register(Blog)
+@admin.register(Blog)
 class BlogAdmin(SummernoteModelAdmin):
+	list_display = ['id', 'title','detail']
 	summernote_fields = ('detail',)
 
-admin.site.register(Blog, BlogAdmin)
 
 admin.site.register(Comment)
 admin.site.register(Reply)
